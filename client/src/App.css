@@ -1,20 +1,82 @@
-.home-container{
-    width: 100vw;
-    height: 100vh;
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  color: white;
+}
+.home-container .main {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.home-container h1 {
+  font-size: 48px; /* Adjust font size as needed */
+  font-weight: bold;
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #ff00ff
+  ); /* Gradient text color */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.home-container p{
+    font-size: 22px;
+}
+.input-container input {
+  font-size: 24px;
+  display: block;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 30px;
+  border: 1px solid gainsboro;
+  outline: none;
+  background: transparent;
+  color: aliceblue;
+}
+.input-container button {
+  font-size: 24px;
+  display: block;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #ff00ff;
+  border: none;
+}
+
+.room{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
-.input-container input{
-    font-size: 24px;
-    display: block;
-    padding: 10px 20px;
-    margin: 10px;
-}
-.input-container button{
-    font-size: 24px;
-    display: block;
-    padding: 10px 20px;
-    cursor: pointer;
-    width: 100%;
+
+
+@media (max-width: 767px) {
+    .home-container{
+        gap: 20px;
+    }
+    .home-container .main {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .home-container h1{
+        font-size: 28px;
+      }
+      .home-container p{
+        font-size: 14px;
+      }
+
+      .input-container button {
+        margin-top: 10px;
+      }
 }
